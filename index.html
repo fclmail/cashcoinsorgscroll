@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA$H COIN</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #002b00; /* Dark green */
+            color: #00ff00; /* Fluorescent green */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+        }
+
+        .flashing-box {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            height: 100px;
+            overflow: hidden;
+            border: 3px solid #00ff00;
+            background: rgba(0, 43, 0, 0.9);
+            box-shadow: 0 0 20px #00ff00;
+        }
+
+        .messages {
+            position: absolute;
+            animation: scrollUp 17.5s infinite;
+        }
+
+        .message {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+            font-size: 1.5rem;
+        }
+
+        @keyframes scrollUp {
+            0%, 14.285% { transform: translateY(0); }
+            14.285%, 28.57% { transform: translateY(-100px); }
+            28.57%, 42.855% { transform: translateY(-200px); }
+            42.855%, 57.14% { transform: translateY(-300px); }
+            57.14%, 71.425% { transform: translateY(-400px); }
+            71.425%, 85.71% { transform: translateY(-500px); }
+            85.71%, 100% { transform: translateY(-600px); }
+        }
+
+        .flashing-box:hover .message {
+            animation: flashingText 0.5s infinite alternate;
+        }
+
+        @keyframes flashingText {
+            from { opacity: 1; }
+            to { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flashing-box">
+        <div class="messages">
+                        <div class="message">                </div>
+
+            <div class="message">FREE PIZZA WITH EVERY PURCHASE 🍕</div>
+            <div class="message">FREE $1,200,000 AIRDROP  🆓 💵💵💵💵</div>
+
+            <div class="message">WIN FREE PIZZA FOR 1 YEAR  🍕🍕🍕🍕🍕</div>
+            <div class="message">300% PRICE INCREASE EXPECTED📈</div>
+            <div class="message">CA$H COIN - ALL THE BEST WALLETS HAVE SOME ✅😃</div>
+            <div class="message">BUY WITH CRYPTO, VISA, MASTERCARD, OR PAYPAL 💳🪙✅</div>
+            <div class="message">BUY NOW BEFORE PRICE GOES UP 😃 ✅    </div>
+        </div>
+    </div>
+</body>
+</html>
